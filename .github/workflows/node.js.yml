@@ -34,5 +34,5 @@ jobs:
 
         chmod +x codecov -f important
         ./codecov
-     - run: |
+    - run: |
         ./codecov -f bypass
