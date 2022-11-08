@@ -27,12 +27,12 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    #- run: npm test
 
     - run: |
         curl -Os https://uploader.codecov.io/latest/linux/codecov
 
         chmod +x codecov 
-        ./codecov -F important
+      # ./codecov -F important
     - run: |
         ./codecov -F bypass
