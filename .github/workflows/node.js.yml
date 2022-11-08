@@ -32,7 +32,7 @@ jobs:
     - run: |
         curl -Os https://uploader.codecov.io/latest/linux/codecov
 
-        chmod +x codecov -T c1f8aad8-1d63-412f-8e70-a4dae12fb779
-        ./codecov -F important
+        chmod +x codecov 
+        ./codecov -F important -T c1f8aad8-1d63-412f-8e70-a4dae12fb779
     - run: |
         ./codecov -F bypass -T c1f8aad8-1d63-412f-8e70-a4dae12fb779
