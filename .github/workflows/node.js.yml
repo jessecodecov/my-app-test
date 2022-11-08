@@ -33,5 +33,7 @@ jobs:
     - run: |
         curl -Os https://uploader.codecov.io/latest/linux/codecov
 
-        chmod +x codecov
+        chmod +x codecov -f important
         ./codecov
+     - run: |
+        ./codecov -f bypass

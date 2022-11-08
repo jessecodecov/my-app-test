@@ -1,0 +1,13 @@
+coverage:
+  status:
+    project:
+      default:
+        target: auto #overall project/ repo coverage
+      important: 
+        flags:    # this key tells Codecov to only use the coverage for these flags
+          - important
+flags:
+  important:
+    carryforward: true
+  bypass:
+    carryforward: true
