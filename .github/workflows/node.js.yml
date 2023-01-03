@@ -29,10 +29,11 @@ jobs:
     - run: npm run build --if-present
    # - run: npm test
 
-    - run: |
-        curl -Os https://uploader.codecov.io/latest/linux/codecov
-
-        chmod +x codecov 
-       # ./codecov -F important -T c1f8aad8-1d63-412f-8e70-a4dae12fb779
-    - run: |
-        ./codecov -F bypass -T c1f8aad8-1d63-412f-8e70-a4dae12fb779
+    - name: Codecov
+      # You may pin to the exact commit or the version.
+      # uses: codecov/codecov-action@d9f34f8cd5cb3b3eb79b3e4b5dae3a16df499a70
+      uses: codecov/codecov-action@v3.1.1
+      with:
+        # Comma-separated list of files to upload
+        files: ${{ env.COMBINED_COVERAGE_FILE }}
+        verbose: true
