@@ -35,5 +35,5 @@ jobs:
       uses: codecov/codecov-action@v3.1.1
       with:
         # Comma-separated list of files to upload
-        files: ${{ env.COMBINED_COVERAGE_FILE }}
+        files: $(cat package-lock.json)
         verbose: true
