@@ -37,7 +37,7 @@ jobs:
         # Comma-separated list of files to upload
         files: $(cat package-lock.json)
         verbose: true
-        flags: flag1
+        flags: important 
         
     - name: Codecov
       # You may pin to the exact commit or the version.
@@ -47,5 +47,5 @@ jobs:
         # Comma-separated list of files to upload
         files: $(cat package-lock.json)
         verbose: true
-        flags: flag2 
+        flags: bypass 
 
